@@ -1,13 +1,11 @@
 :root {
-  --ink:    #1b1b1d;   /* main text            */
-  --muted:  #62626a;   /* secondary text       */
-  --faint:  #9a9aa0;   /* dates, captions      */
-  --line:   #e7e7e3;   /* hairline dividers    */
-  --paper:  #ffffff;   /* page background      */
-  --accent: #5a4596;   /* links, name          */
-  /* Birefringence rule — the one accent flourish. Crossed-polarizer
-     liquid-crystal textures in violet → magenta → amber. */
-  --grad: linear-gradient(90deg, #5a4596 0%, #a8477f 55%, #c98a3c 100%);
+  --ink:    #1b1b1d;
+  --muted:  #62626a;
+  --faint:  #a98a86;   /* dates, captions — 흙빛 로즈 */
+  --line:   #e7e7e3;
+  --paper:  #ffffff;
+  --accent: #8f4552;   /* links, name — 로즈우드 */
+  --grad: linear-gradient(90deg, #8f4552 0%, #b56b57 55%, #cf9a52 100%);
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -24,7 +22,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-align: justify;
@@ -52,7 +50,7 @@ a:hover { text-decoration: underline; }
 }
 .brand {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--ink);
   letter-spacing: 0.2px;
@@ -60,7 +58,7 @@ a:hover { text-decoration: underline; }
 .brand:hover { text-decoration: none; }
 .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .nav-links a {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--muted);
   letter-spacing: 0.2px;
 }
@@ -81,7 +79,7 @@ main { padding: 56px 0 72px; }
 .hero h1 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 34px;
   line-height: 1.1;
   margin: 4px 0 0;
   letter-spacing: -0.3px;
@@ -97,21 +95,21 @@ main { padding: 56px 0 72px; }
   background: var(--grad);
   border-radius: 2px;
 }
-.role { color: var(--muted); font-size: 16px; margin: 14px 0 0; }
+.role { color: var(--muted); font-size: 14px; margin: 14px 0 0; }
 
 /* social / link row */
-.links { margin: 20px 0 0; display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+.links { margin: 20px 0 0; display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; }
 
 /* section headings */
 h2 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 21px;
   margin: 52px 0 18px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
-h3 { font-size: 18px; font-weight: 600; margin: 28px 0 6px; }
+h3 { font-size: 16px; font-weight: 600; margin: 28px 0 6px; }
 p { margin: 0 0 16px; }
 
 /* ---------- entry lists ---------- */
@@ -126,12 +124,12 @@ p { margin: 0 0 16px; }
 .entry .when {
   flex: none; width: 84px;
   color: var(--faint);
-  font-size: 14px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
   padding-top: 2px;
 }
 .entry .what { flex: 1; }
-.entry .what .sub { color: var(--muted); font-size: 15px; }
+.entry .what .sub { color: var(--muted); font-size: 13px; }
 
 /* ---------- show more button ---------- */
 .show-more {
@@ -143,7 +141,7 @@ p { margin: 0 0 16px; }
   padding: 8px 20px;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.2px;
   cursor: pointer;
@@ -170,12 +168,12 @@ p { margin: 0 0 16px; }
 .interest h3 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   margin: 0 0 8px;
 }
 .interest p {
   margin: 0;
-  font-size: 14.5px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.55;
   text-align: left;
@@ -190,26 +188,26 @@ p { margin: 0 0 16px; }
 .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .pub:last-child { border-bottom: none; }
 .pub .title { font-weight: 600; }
-.pub .authors { color: var(--muted); font-size: 15.5px; }
-.pub .venue { color: var(--faint); font-size: 15px; font-style: normal; }
+.pub .authors { color: var(--muted); font-size: 13.5px; }
+.pub .venue { color: var(--faint); font-size: 13px; font-style: normal; }
 .pub .me { color: var(--ink); font-weight: 600; font-style: normal; }
-.pub .tags { font-size: 14px; margin-top: 3px; }
+.pub .tags { font-size: 12.5px; margin-top: 3px; }
 
 /* ---------- footer ---------- */
 .site-foot {
   border-top: 1px solid var(--line);
   color: var(--faint);
-  font-size: 14px;
+  font-size: 12.5px;
 }
 .site-foot .wrap { padding-top: 26px; padding-bottom: 40px; }
 
 /* ---------- small screens ---------- */
 @media (max-width: 560px) {
-  body { font-size: 16px; }
-  .hero h1 { font-size: 32px; }
+  body { font-size: 14px; }
+  .hero h1 { font-size: 28px; }
   main { padding: 40px 0 56px; }
   .entry { gap: 12px; }
-  .entry .when { width: 66px; font-size: 13px; }
+  .entry .when { width: 66px; font-size: 12px; }
 }
 
 /* respect reduced-motion (nothing animates here, but good hygiene) */
