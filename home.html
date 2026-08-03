@@ -46,7 +46,7 @@
       </p>
 
       <h2>Latest News</h2>
-      <div class="entries">
+      <div class="entries" id="news">
         <div class="entry"><div class="when">Jul 2026</div><div class="what">New paper out in <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021979726013810"><em>JCIS</em></a> !</div></div>
         <div class="entry"><div class="when">Jul 2026</div><div class="what">Successfully completed PhD defense</div></div>
         <div class="entry"><div class="when">Jun 2026</div><div class="what">Presented at the ACS Colloid and Surface Science Symposium, Newark, DE</div></div>
@@ -60,6 +60,7 @@
         <div class="entry"><div class="when">Jan2023</div><div class="what">Presented at the Gordon Research Conference in Complex Active and Adaptive Material Systems, Ventura, CA</div></div>
         <div class="entry"><div class="when">Aug 2020</div><div class="what">Started PhD at Cornell University</div></div>
       </div>
+      <button class="show-more" id="news-toggle" type="button">Show more</button>
 
     </div>
   </main>
@@ -68,5 +69,26 @@
     <div class="wrap">© Youlim Ha · Cornell University, Ithaca, NY</div>
   </footer>
 
+  <script>
+    (function () {
+      var LIMIT = 5;                              // 처음에 보여줄 뉴스 개수
+      var list = document.getElementById('news');
+      var btn  = document.getElementById('news-toggle');
+      if (!list || !btn) return;
+      var items = list.querySelectorAll('.entry');
+      if (items.length <= LIMIT) { btn.style.display = 'none'; return; }
+      var open = false;
+      function apply() {
+        for (var i = LIMIT; i < items.length; i++) {
+          items[i].style.display = open ? '' : 'none';
+        }
+        btn.textContent = open ? 'Show less' : 'Show more';
+      }
+      apply();
+      btn.addEventListener('click', function () { open = !open; apply(); });
+    })();
+  </script>
+</body>
+  
 </body>
 </html>
