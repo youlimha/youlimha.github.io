@@ -133,6 +133,19 @@ p { margin: 0 0 16px; }
 .entry .what { flex: 1; }
 .entry .what .sub { color: var(--muted); font-size: 15px; }
 
+/* ---------- show more button ---------- */
+.show-more {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 15px;
+  cursor: pointer;
+}
+.show-more:hover { text-decoration: underline; }
+
 /* ---------- publications ---------- */
 .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .pub:last-child { border-bottom: none; }
