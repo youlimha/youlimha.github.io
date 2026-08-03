@@ -112,6 +112,37 @@ h2 {
 h3 { font-size: 16px; font-weight: 600; margin: 28px 0 6px; }
 p { margin: 0 0 16px; }
 
+/* ---------- research interest cards ---------- */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 4px;
+}
+.interest {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+.interest h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.interest p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .interest-grid { grid-template-columns: 1fr; }
+}
+.ri-icon { display: inline-flex; color: var(--accent); margin-bottom: 10px; }
+.ri-icon svg { width: 26px; height: 26px; }
+
 /* ---------- entry lists ---------- */
 .entries { margin: 0; }
 .entry {
@@ -153,36 +184,20 @@ p { margin: 0 0 16px; }
   text-decoration: none;
 }
 
-/* ---------- research interest cards ---------- */
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 4px;
-}
-.interest {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 18px;
-}
-.interest h3 {
-  font-family: var(--serif);
+/* ---------- oral / poster tags ---------- */
+.ptag {
+  display: inline-block;
+  font-size: 11px;
   font-weight: 500;
-  font-size: 15px;
-  margin: 0 0 8px;
+  letter-spacing: 0.3px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  margin-right: 8px;
+  vertical-align: 1.5px;
+  white-space: nowrap;
 }
-.interest p {
-  margin: 0;
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.55;
-  text-align: left;
-}
-@media (max-width: 640px) {
-  .interest-grid { grid-template-columns: 1fr; }
-}
-.ri-icon { display: inline-flex; color: var(--accent); margin-bottom: 10px; }
-.ri-icon svg { width: 26px; height: 26px; }
+.ptag.oral   { background: #f3e6e9; color: #8f4552; }
+.ptag.poster { background: #f0ece4; color: #9c7a3f; }
 
 /* ---------- publications ---------- */
 .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
