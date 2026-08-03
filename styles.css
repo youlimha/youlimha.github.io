@@ -155,6 +155,37 @@ p { margin: 0 0 16px; }
   text-decoration: none;
 }
 
+/* ---------- research interest cards ---------- */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 4px;
+}
+.interest {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+.interest h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+.interest p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .interest-grid { grid-template-columns: 1fr; }
+}
+.ri-icon { display: inline-flex; color: var(--accent); margin-bottom: 10px; }
+.ri-icon svg { width: 26px; height: 26px; }
+
 /* ---------- publications ---------- */
 .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .pub:last-child { border-bottom: none; }
