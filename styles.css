@@ -114,7 +114,7 @@ h2 {
 h3 { font-size: 18px; font-weight: 600; margin: 28px 0 6px; }
 p { margin: 0 0 16px; }
 
-/* ---------- entry lists (news, cv rows) ---------- */
+/* ---------- entry lists ---------- */
 .entries { margin: 0; }
 .entry {
   display: flex;
@@ -141,20 +141,6 @@ p { margin: 0 0 16px; }
 .pub .venue { color: var(--faint); font-size: 15px; font-style: normal; }
 .pub .me { color: var(--ink); font-weight: 600; font-style: normal; }
 .pub .tags { font-size: 14px; margin-top: 3px; }
-
-/* ---------- research ---------- */
-.theme { padding: 6px 0 10px; }
-.kw {
-  font-size: 14px; color: var(--faint);
-  margin-top: 4px; letter-spacing: 0.2px;
-}
-.kw b { color: var(--muted); font-weight: 600; }
-.skills .entry .when { width: 118px; color: var(--muted); font-weight: 600; }
-
-/* ---------- contact ---------- */
-.contact-list { list-style: none; padding: 0; margin: 8px 0 0; }
-.contact-list li { padding: 9px 0; border-bottom: 1px solid var(--line); }
-.contact-list .k { display: inline-block; width: 108px; color: var(--muted); }
 
 /* ---------- footer ---------- */
 .site-foot {
