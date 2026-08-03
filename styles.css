@@ -135,16 +135,25 @@ p { margin: 0 0 16px; }
 
 /* ---------- show more button ---------- */
 .show-more {
-  margin-top: 16px;
-  background: none;
-  border: none;
-  padding: 4px 0;
-  color: var(--accent);
+  display: inline-block;
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 20px;
+  color: var(--ink);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
   cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
-.show-more:hover { text-decoration: underline; }
+.show-more:hover {
+  background: #f6f6f4;
+  border-color: #d8d8d3;
+  text-decoration: none;
+}
 
 /* ---------- publications ---------- */
 .pub { padding: 14px 0; border-bottom: 1px solid var(--line); }
