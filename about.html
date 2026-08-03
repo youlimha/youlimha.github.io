@@ -68,7 +68,7 @@
       </div>
 
       <h2>Honors &amp; Awards</h2>
-      <div class="entries">
+      <div class="entries" id="honors">
         <div class="entry"><div class="when">2026</div><div class="what"><a href="https://sites.udel.edu/colloids2026/sample-page/technical-program/">Langmuir Student Award Finalist</a> <span class="sub">ACS Division of Colloid and Surface Chemistry</span></div></div>
         <div class="entry"><div class="when">2025</div><div class="what">Excellence in Research Presentation <span class="sub">Korean-American Scientists and Engineers Association</span></div></div>
         <div class="entry"><div class="when">2024</div><div class="what"><a href="https://photos.google.com/share/AF1QipNt1pG6Feb0-jjb1--OkhuXnhogmhMEx5tm4ORuN5m_E7SFCPHmzm6IEmV1oCIh1A?pli=1&key=NFAyQjZlWnR5WENVQlZRamYwNWZNTFcxTnlWM1B3">MIT Rising Stars in Chemical Engineering</a> <span class="sub">Massachusetts Institute of Technology</span></div></div>
@@ -82,7 +82,7 @@
         <div class="entry"><div class="when">2016</div><div class="what">Department of Chemistry Excellence in Chemistry <span class="sub">University of Virginia</span></div></div>
         <div class="entry"><div class="when">2015</div><div class="what">Samsung Global Internship Distinction Award <span class="sub">Samsung Biologics</span></div></div>
       </div>
-      <button class="show-more" id="news-toggle" type="button">Show more</button>
+      <button class="show-more" id="honors-toggle" type="button">Show more</button>
 
       <h2>Teaching Experience</h2>
       <div class="entries">
@@ -133,6 +133,26 @@
   <footer class="site-foot">
     <div class="wrap">© Youlim Ha · Cornell University, Ithaca, NY</div>
   </footer>
+
+  <script>
+    (function () {
+      var LIMIT = 5;
+      var list = document.getElementById('honors');
+      var btn  = document.getElementById('honors-toggle');
+      if (!list || !btn) return;
+      var items = list.querySelectorAll('.entry');
+      if (items.length <= LIMIT) { btn.style.display = 'none'; return; }
+      var open = false;
+      function apply() {
+        for (var i = LIMIT; i < items.length; i++) {
+          items[i].style.display = open ? '' : 'none';
+        }
+        btn.textContent = open ? 'Show less' : 'Show more';
+      }
+      apply();
+      btn.addEventListener('click', function () { open = !open; apply(); });
+    })();
+  </script>
 
 </body>
 </html>
