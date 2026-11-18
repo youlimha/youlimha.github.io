@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youlim Ha</title>
+  <meta name="description" content="Youlim Ha — Ph.D. in Chemical and Biomolecular Engineering at Cornell University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">Youlim Ha</a>
+      <div class="nav-links">
+        <a href="home.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+
+      <section class="hero">
+        <img class="portrait" src="profile.png" alt="Youlim Ha"
+             onerror="this.style.visibility='hidden'">
+        <div class="hero-body">
+          <h1>Youlim Ha</h1>
+          <p class="role">Ph.D. in Chemical and Biomolecular Engineering, Cornell University</p>
+          <p class="role">Postdoctoral Research Fellow, Kotov Group, University of Michigan</p>
+          <div class="links">
+            <a href="mailto:youlim@umich.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=5d9-hh4AAAAJ&hl=en">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/youlimha/">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      <h2>Research interests</h2>
+      <div class="interest-grid">
+        <div class="interest">
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-3 4-5.8 6.9-5.8 10.2a5.8 5.8 0 0 0 11.6 0C17.8 10.4 15 7.5 12 3.5z"/></svg></span>
+          <h3>Complex fluids and particles</h3>
+          <p></p>
+        </div>
+        <div class="interest">
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="2.6"/><circle cx="16.5" cy="7.5" r="1.8"/><circle cx="15" cy="15.5" r="2.8"/><circle cx="8" cy="16.5" r="1.6"/></svg></span>
+          <h3>Graph theory</h3>
+          <p></p>
+        </div>
+        <div class="interest">
+          <span class="ri-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11z"/></svg></span>
+          <h3>Light-matter interaction</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <h2>Latest News</h2>
+      <div class="entries" id="news">
+        <div class="entry"><div class="when">Oct 2026</div><div class="what">Started postdoctoral research in the Kotov Group at the University of Michigan</div></div>
+        <div class="entry"><div class="when">Jul 2026</div><div class="what">New paper out in the <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021979726013810"><em>Journal of Colloid and Interface Science</em></a> !</div></div>
+        <div class="entry"><div class="when">Jul 2026</div><div class="what">Successfully completed PhD defense</div></div>
+        <div class="entry"><div class="when">Jun 2026</div><div class="what">Presented at the ACS Colloid and Surface Science Symposium, Newark, DE</div></div>
+        <div class="entry"><div class="when">Aug 2025</div><div class="what">New paper out in <a href="https://www.nature.com/articles/s41586-025-09279-2"><em>Nature</em></a> !</div></div>
+        <div class="entry"><div class="when">Jul 2025</div><div class="what">Attended the i-CoMSE Workshop on Mesoscale Particle-Based Modeling, Starkville, MS</div></div>
+        <div class="entry"><div class="when">Mar 2025</div><div class="what">Presented at the ACS Spring Meeting, San Diego, CA</div></div>
+        <div class="entry"><div class="when">Sep 2024</div><div class="what">Selected for <a href="https://cheme.mit.edu/rising-stars/">MIT Rising Stars in Chemical Engineering</a>, Boston, MA</div></div>
+        <div class="entry"><div class="when">Jun 2024</div><div class="what">Presented at the ACS Colloid and Surface Science Symposium, Seattle, WA</div></div>
+        <div class="entry"><div class="when">May 2024</div><div class="what">Elected President of <a href="https://women.cbe.cornell.edu/">CBE Women</a></div></div>
+        <div class="entry"><div class="when">May 2024</div><div class="what">Received the Lisa Walker Travel Grant Award</div></div>
+        <div class="entry"><div class="when">Jan2023</div><div class="what">Presented at the Gordon Research Conference in Complex Active and Adaptive Material Systems, Ventura, CA</div></div>
+        <div class="entry"><div class="when">Aug 2020</div><div class="what">Started PhD in the Abbott Group at Cornell University</div></div>
+      </div>
+      <button class="show-more" id="news-toggle" type="button">Show more</button>
+
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">© Youlim Ha · Cornell University, Ithaca, NY</div>
+  </footer>
+
+  <script>
+    (function () {
+      var LIMIT = 5;
+      var list = document.getElementById('news');
+      var btn  = document.getElementById('news-toggle');
+      if (!list || !btn) return;
+      var items = list.querySelectorAll('.entry');
+      if (items.length <= LIMIT) { btn.style.display = 'none'; return; }
+      var open = false;
+      function apply() {
+        for (var i = LIMIT; i < items.length; i++) {
+          items[i].style.display = open ? '' : 'none';
+        }
+        btn.textContent = open ? 'Show less' : 'Show more';
+      }
+      apply();
+      btn.addEventListener('click', function () { open = !open; apply(); });
+    })();
+  </script>
+  
+</body>
+</html>
